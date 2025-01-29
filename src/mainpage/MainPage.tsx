@@ -7,13 +7,13 @@ import useEngine from "../hooks/useEngine"
 // const words = faker.lorem.words(20)
 
 const MainPage = () => {
-      const{state,words,timeLeft,typed}=useEngine()
+      const{state,words,timeLeft,typed,totalTyped}=useEngine()
       
   return (
     <>
     <CounterdownTime timeLeft={timeLeft}/>
     <WordsContainer>
-    <Generatorwords words={words}/>
+    <Generatorwords key={words} words={words}/>
     <UserTyping className="absolute inset-0" words={words} userInput={typed}/>
     </WordsContainer>
     
@@ -23,7 +23,7 @@ const MainPage = () => {
       className="mt-10"
       errors={10}
       accuracyPercentage={100}
-      total={200}
+      total={totalTyped}
       />
     </>
   )

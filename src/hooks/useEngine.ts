@@ -14,6 +14,6 @@ const useEngine=()=>{
     const {timeLeft,startCountdown,resetCounterdown}=useCountdownTimer(COUNTDOWN_SECONDS)
     const{typed,cursor,clearTyped,resetTotalTyped, totalTyped}=useTyping(state!=="finish")
     
-    return {state, words,timeLeft,typed} 
+    return {state, words,timeLeft,typed,totalTyped} 
 }
 export default useEngine
