@@ -15,13 +15,13 @@ const useTyping = (enabled: boolean) => {
     const totalTyped = useRef(0)
 
     const keydownHandler = useCallback(
-        ({ key,code}: KeyboardEvent) => {
+        ({ key, code }: KeyboardEvent) => {
 
 
-            if (!enabled || !isKeyboardCodeAllowed(code)) return; 
-            
+            if (!enabled || !isKeyboardCodeAllowed(code)) return;
 
-            
+
+
 
             switch (key) {
                 case "Backspace":
